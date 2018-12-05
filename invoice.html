@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+  *{
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: top;
+}
+h1 { font: bold 100% sans-serif; letter-spacing: 0.5em; text-align: center; text-transform: uppercase; }
+/* table */
+table { font-size: 75%; table-layout: fixed; width: 100%; }
+table { border-collapse: separate; border-spacing: 2px; }
+th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
+th, td { border-radius: 0.25em; border-style: solid; }
+th { background: #EEE; border-color: #BBB; }
+td { border-color: #DDD; }
+/* page */
+html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; padding: 0.5in; }
+html { background: #999; cursor: default; }
+
+body { box-sizing: border-box; height: 11in; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 8.5in; }
+body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); }
+
+/* header */
+
+header { margin: 0 0 3em; }
+header:after { clear: both; content: ""; display: table; }
+
+header h1 { background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
+header address { float: left; font-size: 75%; font-style: normal; line-height: 1.25; margin: 0 1em 1em 0; }
+header address p { margin: 0 0 0.25em; }
+header span, header img { display: block; float: right; }
+header span { margin: 0 0 1em 1em; max-height: 25%; max-width: 60%; position: relative; }
+header img { max-height: 100%; max-width: 100%; }
+header input { cursor: pointer; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; height: 100%; left: 0; opacity: 0; position: absolute; top: 0; width: 100%; }
+
+/* article */
+
+article, article address, table.meta, table.inventory { margin: 0 0 3em; }
+article:after { clear: both; content: ""; display: table; }
+article h1 { clip: rect(0 0 0 0); position: absolute; }
+
+article address { float: left; font-size: 125%; font-weight: bold; }
+
+/* table meta & balance */
+
+table.meta, table.balance { float: right; width: 36%; }
+table.meta:after, table.balance:after { clear: both; content: ""; display: table; }
+
+/* table meta */
+
+table.meta th { width: 40%; }
+table.meta td { width: 60%; }
+
+/* table items */
+
+table.inventory { clear: both; width: 100%; }
+table.inventory th { font-weight: bold; text-align: center; }
+
+table.inventory td:nth-child(1) { width: 26%; }
+table.inventory td:nth-child(2) { width: 38%; }
+table.inventory td:nth-child(3) { text-align: right; width: 12%; }
+table.inventory td:nth-child(4) { text-align: right; width: 12%; }
+table.inventory td:nth-child(5) { text-align: right; width: 12%; }
+
+/* table balance */
+
+table.balance th, table.balance td { width: 50%; }
+table.balance td { text-align: right; }
+
+/* aside */
+
+aside h1 { border: none; border-width: 0 0 1px; margin: 0 0 1em; }
+aside h1 { border-color: #999; border-bottom-style: solid; }
+
+/* javascript */
+
+tr:hover .cut { opacity: 1; }
+
+@media print {
+  * { -webkit-print-color-adjust: exact; }
+  html { background: none; padding: 0; }
+  body { box-shadow: none; margin: 0; }
+  span:empty { display: none; }
+  .add, .cut { display: none; }
+  .noprint {display:none;}
+}
+@page { margin: 0; }
+button.print-button {
+  width: 100px;
+  height: 100px;
+}
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+  border: solid 4px #333;
+}
+span.print-icon::after {
+  border-width: 2px;
+}
+button.print-button {
+  position: relative;
+  padding: 0;
+  border: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+  box-sizing: border-box;
+  background-color: #fff;
+}
+span.print-icon {
+  position: relative;
+  display: inline-block;  
+  padding: 0;
+  margin-top: 20%;
+
+  width: 60%;
+  height: 35%;
+  background: #fff;
+  border-radius: 20% 20% 0 0;
+}
+span.print-icon::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 12%;
+  right: 12%;
+  height: 110%;
+
+  transition: height .2s .15s;
+}
+span.print-icon::after {
+  content: " ";
+  position: absolute;
+  top: 55%;
+  left: 12%;
+  right: 12%;
+  height: 0%;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: 70% 90%;
+  background-position: center;
+  background-image: linear-gradient(
+    to top,
+    #fff 0, #fff 14%,
+    #333 14%, #333 28%,
+    #fff 28%, #fff 42%,
+    #333 42%, #333 56%,
+    #fff 56%, #fff 70%,
+    #333 70%, #333 84%,
+    #fff 84%, #fff 100%
+  );
+  transition: height .2s, border-width 0s .2s, width 0s .2s;
+}
+button.print-button:hover {
+  cursor: pointer;
+}
+button.print-button:hover .print-icon::before {
+  height:0px;
+  transition: height .2s;
+}
+button.print-button:hover .print-icon::after {
+  height:120%;
+  transition: height .2s .15s, border-width 0s .16s;
+}
+.pure-button{
+	width: 140px;
+	height: 25px;
+	outline: none;
+	border-radius: 5px;
+	border: solid;
+	margin-top: 30px;
+}
+.pure-button:hover{
+  letter-spacing: 2px;
+  transition: all 0.4s ease 0s;
+}
+.button {
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 4px solid #2b8bc6;
+  color: #fbfbfb;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+
+/* Just for presentation */  
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.button:active {
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,.2);
+  top: 1px;
+}
+
+.button:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 20px solid #187dbc;
+  border-bottom: 20px solid #187dbc;
+  border-left: 16px solid transparent;
+  border-right: 20px solid #187dbc;
+  position: absolute;
+  opacity: 0.6; 
+  right: 0;
+  top: 0;
+  border-radius: 0 5px 5px 0;  
+}
+input{
+      outline:none;
+    border-radius: 5px;
+    border-color: #B2AAFC;
+    box-shadow: 0px  0px  7px #A49AF9;  
+  }
+</style>
+</head>
+<body>
+	<div>
+	<header>
+      <h1>Invoice</h1>
+      <address contenteditable>
+        <p>{{name}}</p>
+        <p>Address</p>
+        <p>Mobile no. {{ phone }}</p>
+      </address>
+      <span><img alt="" src="static/images/silver-stone-logo.jpg"></span>
+    </header>
+    <article>
+      <h1>Recipient</h1>
+      <address >
+        <p>{{ name }}</p><br>
+    	<p style="font-size: 50%;">{{ email }}</p>
+      </address>
+      <table class="meta">
+        <tr>
+          <th><span>Invoice No. </span></th>
+          <td><span>101138</span></td>
+        </tr>
+        <tr>
+          <th><span >Date</span></th>
+          <td><span>January 1, 2012</span></td>
+        </tr>
+        <tr>
+          <th><span >Amount Due</span></th>
+          {% if paid!=1 %}
+          <td><span id="prefix" >Rs.</span><span>{{ amount }}</span></td>
+          {% endif %}
+          {% if paid==1 %}
+          <td><span id="prefix" >Rs.</span><span>{{ amountt }}</span></td>
+          {% endif %}
+        </tr>
+      </table>
+      <table class="inventory">
+        <thead>
+          <tr>
+            <th><span >Item</span></th>
+            <th><span >Description</span></th>
+            <th><span >Size</span></th>
+            <th><span >Quantity</span></th>
+            <th><span >Price</span></th>
+          </tr>
+        </thead>
+        <tbody id="itemss">
+        	{% for item in data %}
+        		{% if item[0]==email %}
+				<tr id="price">
+				    <td><span>{{item[2]}}</span></td>
+				    <td><span>{{item[5]}}</span><span data-suffix>({{item[1]}})</span></td>
+				    <td><span>{{item[6]}}</span><span data-suffix>Sq. feet</span></td>
+				    <td><span>{{item[7]}}</span></td>
+				    <td><span>{{item[8]}}</span></td>
+				</tr>
+				{% endif %}
+			{% endfor %}
+        </tbody>
+      </table>
+      <table class="balance">
+        <tr>
+          <th><span>Total</span></th>
+          <td><span data-prefix>Rs.</span><span>{{ tot }}</span></td>
+        </tr>
+        <tr>
+          <th><span >GST(18 %)</span></th>
+          <td><span data-prefix>Rs.</span><span>{{ gst }}</span></td>
+        </tr>
+        <tr>
+          <th><span>Amount to be paid</span></th>
+          <td><span data-prefix>Rs.</span><span>{{ amount }}</span></td>
+        </tr>
+      </table>
+    </article>
+    <aside>
+      <h1><span >Additional Notes</span></h1>
+      <div >
+        <p>A finance charge of 1.5% will be made on unpaid balances after 30 days. Your order will be  delivered within 5-6 bussiness days</p>
+      </div>
+    </aside><br><br>
+</div>
+    <div class="noprint">
+    	<button class="print-button" style="float: right;clear: none;" onclick="window.print()"><span class="print-icon"></span></button>
+    	{% if paid!=1 %}
+    	<form action="payment" method="post">
+			<button class="pure-button">Make Payment</button><br>
+	    </form>
+	    {% endif %}
+	    {% if paid==1 %}
+	    <button class="pure-button" onclick="callalert()">Make Payment</button><br>
+	    {% endif %}
+	    <form action="back" method="post">
+			<button class="pure-button">Back</button>
+	    </form>
+	    <form action="updateinvoice" method="post">
+	     <input type="text" style="margin-left: 35%;border-radius: 5px;border-style:none;height: 33px;width: 200px;margin-bottom: 10px" name="id" placeholder="&emsp;Stone ID to Remove" />
+     	 <button class="button" onclick="cart()">Update</button>
+	</div>
+    
+    <script>
+		function callalert(){
+			alert('Payment Done Already!!!!!\nCheck Due Amount....');
+		}
+    </script>
+</body>
+</html>
