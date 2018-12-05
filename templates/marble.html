@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 #top{
+     background: #050A4D;
+     height: 45px;
+     width:1265px;
+     margin-left: -10px;
+     margin-right: -10px;
+     margin-top: -25px;  
+
+	}
+	.help{
+	  color:white;
+	  font-family: "Verdana", Arial, Sans-serif;
+	  font-weight: normal;
+	}
+	#location {
+	   float:right;
+	   margin-top: -40px;
+	   margin-right: 275px;
+	   padding: 1px 6px 1px 6px;
+	   border: none;
+	   background-color: transparent;
+	}
+
+
+	#call{
+	   float:right;
+	   margin-top: -40px;
+	   margin-right: 60px;
+	   padding: 1px 6px 1px 6px;
+	   border: none;
+	   background-color: transparent;
+	}
+	#container{
+		position: relative;
+		width: 1100px;
+		height: 400px;
+		margin:auto;
+		margin-top: 30px;
+	}
+	select:focus{
+		outline:none;
+		border-radius: 5px;
+		border-color: #B2AAFC;
+		box-shadow: 0px  0px  7px #A49AF9;
+	}
+	input:focus{
+	    outline:none;
+		border-radius: 5px;
+		border-color: #B2AAFC;
+		box-shadow: 0px  0px  7px #A49AF9;	
+	}
+	.btn{
+		background: #050A4D;
+		width: 100px;
+		height: 33px;
+		border-radius: 7px;
+		color: white;
+		border: none;
+		outline: none;
+		margin-left: 20px;
+		letter-spacing: 2px;
+	}
+	.btn:hover{
+		background: #DD261F;
+		letter-spacing: 3px;
+		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		transition: all 0.4s ease 0s;
+	}
+	.btnn{
+		background: #050A4D;
+		width: 100px;
+		height: 33px;
+		border-radius: 7px;
+		color: white;
+		border: none;
+		outline: none;
+		margin-left: 20px;
+		letter-spacing: 2px;
+	}
+	.btnn:hover{
+		background: #DD261F;
+		letter-spacing: 3px;
+		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+		transition: all 0.4s ease 0s;
+	}
+	#container1{
+    position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+   #container2{
+    position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+    #container3{
+     position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+    
+   }
+    #container4{
+    position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+    #container5{
+    position: absolute;
+     margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+   #container6{
+    position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+   #container7{
+     position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    display: inline-block ;
+    visibility: hidden;
+   }
+    #container8{
+     position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    visibility: hidden;
+   }
+    #container9{
+     position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    visibility: hidden;
+   }
+    #container10{
+     position: absolute;
+    margin-left: 35px;
+    top: 500px;
+    left: 100px;
+    bottom:0;
+    right: 0; 
+    visibility: hidden;
+	}
+   .myslide{
+   	float: left;
+   	clear: none;
+   	position: relative;
+   }
+   .overlay {
+	  position: absolute;
+	  bottom: 0;
+	  left: 7px;
+	  right: 0;
+	  top: 1px;
+	  background: #000000;
+	  overflow: hidden;
+	  width: 280px;
+	  height: 150px;
+	  opacity: .5;
+	  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: .5s ease;
+	  transition: .5s ease;
+	}
+   .myslide:hover .overlay {
+  	 -webkit-transform: scale(1);
+     -ms-transform: scale(1);
+     transform: scale(1);
+   }
+   .text {
+	  color: white;
+	  font-size: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  text-align: center;
+	}
+	.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 70px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#myBtn{
+	width: 280px;
+	height: 150px;
+}
+</style>
+	<title>Marble</title>
+</head>
+<body>
+	<div id="top">
+	   <h4 class="help" style="padding-top: 15px;margin-left: 850px">Help</h4>
+		  <button id="location" style="outline: none" type="Submit" onclick="india()">
+			<img id="loc" src="static/images/location.png" style="float:left;margin-right: 4pt;margin-top: 1pt" width="17" height="17" >
+        	<span style="color:white;font-size:12pt;font-family:Verdana", Arial, Sans-serif>India</span>
+      </button>
+      <button id="call" style="outline: none" type="Submit">
+			<img src="static/images/call.png" style="float:left;margin-right: 6pt;margin-top: 2pt" width="17" height="17">
+        	<span style="color:white;font-size:12pt;font-family:Verdana", Arial, Sans-serif>(+91) 8553859227</span>
+      </button>
+        <hr style="height:3px;border:none;color:#333;background-color:#333;margin-top: -9pt" />
+    </div>
+    <div id="container">
+       <h4 style="color:#050A4D;font-family:Trebuchet MS;font-size: 18px;font-weight: normal;line-height: 24pt;letter-spacing: 2px;">Celebrated as the purest marble and regarded as the epitome of elegance infused luxury, Flawless White’s fine grain and glossy finish makes it a universal favourite. The perfectly flirtatious blending of black/grey with the startling backdrop of chaste white marble lends Cat’s Eye a superlative and sensual appeal. Perfect for floorings, these can be used for accentuating the interiors. Suitable for residential as well as commercial applications, these marble are bound to make your interiors stand out.</h4>
+       <br>
+       <h1 style="color: #050A4D;font-weight: normal;font-family: Trebuchet MS">Search Your Product</h1>
+       <hr style="background: #050A4D;height: 3px;width: 37px;margin-left: 0px;margin-top: -20px;border:none;border-radius: 3px">
+       <div style="float: left;clear: none">
+	  	<select style="width: 230px;height: 33px;margin-top: 40px;border-radius: 5px;margin-right: 30px"  id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+		    <option value="0">Select Category</option>
+		    <option value="Imported Marble">Imported Marble</option>
+		    <option value="Flawless">Flawless White & Cat's Eye</option>
+		    <option value="Wonder White">Wonder White</option>
+	    </select>
+	    </div>
+	    <div style="float: left;clear: none">
+	    <select style="width: 200px;height: 33px;margin-top: 40px;border-radius: 5px;margin-right: 30px" id="status" name="status" onchange="javascript: typedropdown(this.options[this.selectedIndex].value);">
+		    <option value="0">Choose Type</option>
+		    <option value="Exotic">Exotic</option>
+		    <option value="Onyx">Onyx</option>
+		    <option value="Travertine">Travertine</option>
+	    </select>
+		</div>
+		<div style="float: left;clear: none">
+	    <select style="width: 200px;height: 33px;margin-top: 40px;border-radius: 5px;margin-right: 60px" id="color" name="color">
+		    <option value="0">Choose Color</option>
+		    <option value="Brown">Brown</option>
+		    <option value="White">White</option>
+		    <option value="Blue">Blue</option>
+	    </select>
+		</div>
+		<form action="back" method="post">
+		<div style="float: right;clear:none;margin-top: 40px">
+				<button class="btnn" name="marble" value="back" >
+				<img src="static/images/back.png"style="float:left;clear:none;margin-top: -2pt" width="22" height="20">
+	        	Back</button>
+		</div>
+		</form>
+		<div style="margin-top: 48px;">
+			<button class="btn" onclick="search()"  name="marble" value="Search">Search</button>
+	    </div>
+    </div>
+    <div id="container1" >
+		      <div class="myslide">
+		      	 <button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal1" class="myBtn" name="marble" >
+		         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/astrus.jpg" width="280px" height="150">
+		          <div class="overlay">
+				    <div class="text">Astrus</div>
+				  </div>
+				  </button>
+				 </div>
+					<div id="myModal1" class="modal">
+					  <div class="modal-content">
+					    <span class="close" id="myModal1">&times;</span>
+					    <form action="addtocart" method="post">
+					    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" class="asd" value="Astrus" name="marblee" />
+					    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/astrus.jpg" width="470px" height="250"><br>
+					    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+					     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+						    <option value="0">Select Size(Feet by Feet)</option>
+						    <option value="4">2 x 2</option>
+						    <option value="9">3 x 3</option>
+						    <option value="16">4 x 4</option>
+						    <option value="25">5 x 5</option>
+					    </select>
+				    		<input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+					       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+					    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+					    </form>
+					  </div>
+					</div>
+				 <div class="myslide">
+					  <button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal2" class="myBtn" name="marble" >
+			         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/avorio.jpg" width="280px" height="150">
+			         <div class="overlay">
+					    <div class="text">Avorio</div>
+					  </div>
+					  </button>
+					</div>
+					<div id="myModal2" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal2">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Avorio" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/avorio.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+						 <button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal3" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/bronze star.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Bronze Star</div>
+						 </div>
+						  </button>
+				</div>
+				<div id="myModal3" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal3">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Bronze Star" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/bronze star.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+							<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal4" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/copper star.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Copper Star</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal4" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal4">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Copper Star" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/copper star.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+							<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal5" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/duetto.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Duetto</div>
+						  </div>
+						</button>
+				</div>
+					<div id="myModal5" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal5">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Duetto" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/duetto.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+						  <button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal6" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/metallic.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Metallic</div>
+						  </div>
+						</button>
+				</div>
+					<div id="myModal6" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal6">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Metallic" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/metallic.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+					 <button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal7" class="myBtn" name="marble" >
+		         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/bellatrix.jpg" width="280px" height="150">
+		        <div class="overlay">
+				    <div class="text">Bellatrix</div>
+				  </div>
+				</button>
+				</div>
+				<div id="myModal7" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal7">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Bellatrix" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/bellatrix.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+    </div>
+    <div id="container2">
+		     	<div class="myslide">
+	     			<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal8" class="myBtn" name="marble" >
+				        <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Jurassic-Brown-Onyx.jpg" width="280px" height="150">
+			            <div class="overlay">
+					    <div class="text">Jurassic Brown Onyx</div>
+	   				    </div>
+   					</button>
+				</div>
+				<div id="myModal8" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal8">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Jurassic Brown Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Jurassic-Brown-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				 <div class="myslide">
+				 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal9" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Lumix-Gold-Onyx.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Lumix Gold Onyx</div>
+						  </div>
+					</button>
+				</div>
+				<div id="myModal9" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal9">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Lumix Gold Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Lumix-Gold-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+     </div>
+      <div id="container3">
+		      <div class="myslide">
+			      	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal10" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Magma-Gold-Travertine.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Magma Gold Travertine</div>
+						  </div>
+					</button>
+			 </div>
+			 <div id="myModal10" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal10">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Magma Gold Travertine" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Magma-Gold-Travertine.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Travertine" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				 <div class="myslide">
+					 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal11" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Multi-Color-Travertine.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Multi Color Travertine</div>
+							  </div>
+						</button>
+				</div>
+				 <div id="myModal11" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal11">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Multi Color Travertine" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Multi-Color-Travertine.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Travertine" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+					<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal12" class="myBtn" name="marble" >
+		        		 <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/river-Wave-Travertine.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">River Wave Travertine</div>
+						  </div>
+						</button>
+				</div>
+					 <div id="myModal12" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal12">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="River Wave Travertine" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/river-Wave-Travertine.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Travertine" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+					<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal13" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Wallnut-Travertine.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Wallnut Travertine</div>
+							  </div>
+						</button>
+					</div>
+					<div id="myModal13" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal13">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Wallnut Travertine" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wallnut-Travertine.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Travertine" name="type">
+						    <input type="hidden" value="Brown" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				</div>
+		<div id="container4">
+			      <div class="myslide">
+			      	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal14" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Cristalito.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Cristalito</div>
+						  </div>
+					 </button> 
+					</div>
+					<div id="myModal14" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal14">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Cristalito" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cristalito.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+
+					 <div class="myslide">
+					 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal15" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Lumix.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Lumix</div>
+							  </div>
+					</button>
+					</div>
+					<div id="myModal15" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal15">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Lumix" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Lumix.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+					<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal16" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Sky-Gold.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Sky-Gold</div>
+							  </div>
+					</div>
+					<div id="myModal16" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal16">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Sky-Gold" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Sky-Gold.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+					<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal17" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Taj-Mahal.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Taj Mahal</div>
+							  </div>
+						</button>
+					</div>
+					<div id="myModal17" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal17">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Taj Mahal" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Taj-Mahal.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+	</div>
+	<div id="container5">
+			      <div class="myslide">
+			      	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal18" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Blue-Bahia.png" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Blue Bahia</div>
+						  </div>
+						</button>
+					</div>
+					<div id="myModal18" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal18">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Blue Bahia" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Blue-Bahia.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+					 <div class="myslide">
+					 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal19" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Kamarica.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Kamarica</div>
+							  </div>
+						</button>
+					</div>
+					<div id="myModal19" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal19">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Kamarica" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Kamarica.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+					<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal20" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/lemurian.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Lemurian</div>
+							  </div>
+						</button>
+					</div>
+					<div id="myModal20" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal20">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Lemurian" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Lemurian.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+					<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal21" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Sodalite-Blue.png" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Sodalite Blue</div>
+							  </div>
+						</button>
+					</div>
+					<div id="myModal21" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal21">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Sodalite Blue" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Sodalite-Blue.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Exotic" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+				</div>
+			</div>
+	 <div id="container6">
+		      <div class="myslide">
+			      	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal22" class="myBtn" name="marble">
+				         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Crema-Delicato-Onyx.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Crema Delicato Onyx</div>
+						  </div>
+					</button>
+				</div>
+				<div id="myModal22" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal22">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Crema Delicato Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Crema-Delicato-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+				 <div class="myslide">
+					 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal23" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Crema-Versaillies-onyx.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Crema Versaillies onyx</div>
+							  </div>
+						</button>
+				</div>
+				<div id="myModal23" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal23">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Crema Versaillies onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Crema-Versaillies-onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+						<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal24" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Ice-Onyx-variation.jpg" width="280px" height="150">
+					         <div class="overlay">
+							    <div class="text">Ice Onyx</div>
+							  </div>
+						</button>
+				</div>
+				<div id="myModal24" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal24">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Ice Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Ice-Onyx-variation.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+					<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal25" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Rainbow-Onyx.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Rainbow Onyx</div>
+						  </div>
+					</button>
+				</div>
+				<div id="myModal25" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal25">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Rainbow Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Rainbow-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+					<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal26" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Tiger-Onyx.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Tiger Onyx</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal26" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal26">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Tiger Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Tiger-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+					<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal27" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/VANILLA-ONYX.png" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Vanilla Onyx</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal27" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal27">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Vanilla Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/VANILLA-ONYX.png" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+				<div class="myslide">
+					<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal28" class="myBtn" name="marble" >
+					         <img  style="margin-right: 20px;box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/White-Onyx.jpg" width="280px" height="150">
+					        <div class="overlay">
+							    <div class="text">White-Onyx</div>
+							  </div>
+					</button>
+				</div>
+					<div id="myModal28" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal28">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="White-Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/White-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+			<div class="myslide">
+				<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal29" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/White-Onyx-Extra.jpg" width="280px" height="150">
+				        <div class="overlay">
+						    <div class="text">White Onyx Extra</div>
+						  </div>
+					</button>
+				</div>
+				<div id="myModal29" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal29">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="White Onyx Extra" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/White-Onyx-Extra.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+					</div>
+     </div>
+     <div id="container7">
+		     	<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal30" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;display: block;box-shadow: 0px 0px 10px gray" src="static/images/Blue-Onyx.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Blue Onyx</div>
+						  </div>
+					</button>
+				</div>
+				<div id="myModal30" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal30">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Blue Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Blue-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+				 <div class="myslide">
+				 	<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal31" class="myBtn" name="marble" >
+				         <img  style="margin-right: 20px;margin-bottom: 20px;box-shadow: 0px 0px 10px gray" src="static/images/Italia-Blue-Onyx.jpg" width="280px" height="150">
+				         <div class="overlay">
+						    <div class="text">Italia Blue Onyx</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal31" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal31">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Italia Blue Onyx" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Italia-Blue-Onyx.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Onyx" name="type">
+						    <input type="hidden" value="Blue" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						 </div>
+     </div>
+     <div id="container8">
+		     	<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal32" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray" src="static/images/White-Travertine.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">White Travertine</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal32" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal32">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="White Travertine" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/White-Travertine.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Imported Marble" name="category">
+						    <input type="hidden" value="Travertine" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+     </div>
+     <div id="container9">
+     		<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal33" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-1.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Cats-Eye-Variation-1</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal33" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal33">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Cats-Eye-Variation-1" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-1.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+			     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal34" class="myBtn" name="marble" >
+						         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-2.jpg" width="280px" height="150">
+						          <div class="overlay">
+								    <div class="text">Cats-Eye-Variation-2</div>
+								  </div>
+							</button>
+				</div>
+				<div id="myModal34" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal34">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Cats-Eye-Variation-2" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-2.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal35" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-3.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Cats-Eye-Variation-3</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal35" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal35">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Cats-Eye-Variation-3" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-3.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal36" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-4.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Cats-Eye-Variation-4</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal36" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal36">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Cats-Eye-Variation-4" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Cats-Eye-Variation-4.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal37" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-1.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Flawless-White-Variation-1</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal37" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal37">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Flawless-White-Variation-1" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-1.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal38" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-2.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Flawless-White-Variation-2</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal38" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal38">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Flawless-White-Variation-2" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-2.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal39" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-3.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Flawless-White-Variation-3</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal39" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal39">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Flawless-White-Variation-3" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Flawless-White-Variation-3.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Flawless & Cats Eye" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+     </div>
+      <div id="container10">
+     		<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal40" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-1.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Wonder-White-Variation-1</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal40" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal40">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Wonder-White-Variation-1" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-1.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Wonder White" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+			     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal41" class="myBtn" name="marble" >
+						         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-2.jpg" width="280px" height="150">
+						          <div class="overlay">
+								    <div class="text">Wonder-White-Variation-2</div>
+								  </div>
+							</button>
+				</div>
+				<div id="myModal41" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal41">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Wonder-White-Variation-2" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-2.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Wonder White" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal42" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-3.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Wonder-White-Variation-3</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal42" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal42">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Wonder-White-Variation-3" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-3.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Wonder White" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+				<div class="myslide">
+		     		<button type="Submit" style="border: none;margin-right:20px;outline: none;background: transparent;" value="myModal43" class="myBtn" name="marble" >
+				         <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-4.jpg" width="280px" height="150">
+				          <div class="overlay">
+						    <div class="text">Wonder-White-Variation-4</div>
+						  </div>
+						</button>
+				</div>
+				<div id="myModal43" class="modal">
+						  <div class="modal-content">
+						    <span class="close" id="myModal43">&times;</span>
+						    <form action="addtocart" method="post">
+						    <input style="color:#050A4D;font-family:cursive;font-size: 24px;font-weight: bold;border: none;background: transparent;margin-left:-100px;padding-top: 20px;" type="text" value="Wonder-White-Variation-4" name="marblee" />
+						    <img  style="box-shadow: 0px 0px 10px gray;margin-bottom: 20px;" src="static/images/Wonder-White-Variation-4.jpg" width="470px" height="250"><br>
+						    <input type="Number" name="quantity" style="width: 203px;height: 30px;border-radius: 5px;margin-right: 20px;border: 1px solid #9D9D9D;text-align: center;"  placeholder="Enter Quantity(No. of Pieces)" id="quantity" required="">
+						     <select style="width: 200px;height: 33px;margin-top: 20px;border-radius: 5px;margin-right: 10px;" id="size" name="size" required="">
+							    <option value="0">Select Size(Feet by Feet)</option>
+							    <option value="4">2 x 2</option>
+							    <option value="9">3 x 3</option>
+							    <option value="16">4 x 4</option>
+							    <option value="25">5 x 5</option>
+						    </select>
+						    <input type="hidden" value="Wonder White" name="category">
+						    <input type="hidden" value="" name="type">
+						    <input type="hidden" value="White" name="color">
+						       <button type="Submit" style="border: none;margin-top: 20px;width: 200px;height: 50px;font-size: 17px;color: white;border-radius: 10px;margin-left:-10px;" class="btn" name="marble" value="Add to Cart" >
+						    	<img src="static/images/cart.png"style="float:left;clear:none;margin-top: -2pt;margin-right: -5px" width="30" height="22">Add to Cart</button>
+						    </form>
+						  </div>
+						</div>
+			</div>
+
+<script type="text/javascript" src="\static\js\jquery-2.1.4.min.js"></script>  
+<script src="\static\js\jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		dynamicdropdown();
+		typedropdown();
+		search();
+		$('.myBtn').click(function(){
+			var id=$(this).attr("value");
+			$("#"+id).css('display','block');
+			$('.close').on('click',function(){
+			  		$("#"+id).css('display','none');
+				});
+			$('.btn').click(function(){
+				if($("#quantity").val()=="0")
+					alert("Fill Out The Details....");
+				else
+					alert("Item Added Successfully....");
+			});
+		});
+	});
+
+	function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+        case "Imported Marble" :
+            document.getElementById("status").options[0]=new Option("Choose Type","0");
+            document.getElementById("status").options[1]=new Option("Exotic","Exotic");
+            document.getElementById("status").options[2]=new Option("Onyx","Onyx");
+            document.getElementById("status").options[3]=new Option("Travertine","Travertine");
+            document.getElementById("color").options[0]=new Option("Choose Color","0");
+            document.getElementById("color").options[1]=new Option("Brown","Brown");
+            document.getElementById("color").options[2]=new Option("White","White");
+            document.getElementById("color").options[3]=new Option("Blue","Blue");
+            break;
+        case "Flawless" :
+            var x = document.getElementById("status");
+            var y = document.getElementById("color");
+            for(i=x.length;i>0;i--){
+               x.remove(x.i);
+               y.remove(y.i);
+            }
+            document.getElementById("status").options[0]=new Option("Choose Type","0");
+            document.getElementById("color").options[0]=new Option("White","0");
+            break;
+        case "Wonder White" :
+            var x = document.getElementById("status");
+            var y = document.getElementById("color");
+            for(i=x.length;i>0;i--){
+               x.remove(x.i);
+               y.remove(y.i);
+            }
+            document.getElementById("status").options[0]=new Option("Choose Type","0");
+            document.getElementById("color").options[0]=new Option("White","0");
+            break;
+        }
+        return true;
+    }
+    function typedropdown(listindex){
+    	switch(listindex){
+    		case "Travertine" :
+    		 var q = document.getElementById("color");
+    		 q.remove(q.length-1);
+    		 break;
+    		case "Onyx":
+    		 document.getElementById("color").options[3]=new Option("Blue","Blue");
+    		 break;
+    		case "Exotic" :
+    		 document.getElementById("color").options[3]=new Option("Blue","Blue");
+    		 break;
+    	}
+    }
+     function search(){
+	    var x=document.getElementById("source").value;
+	    var y=document.getElementById("status").value;
+	    var z=document.getElementById("color").value;
+	    if(x=="Imported Marble" && y=="Exotic" && z=="Brown"){
+	    	document.getElementById("container1").style.visibility="visible";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Onyx" && z=="Brown"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="visible";	
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Travertine" && z=="Brown"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="visible";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Exotic" && z=="White"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="visible";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Exotic" && z=="Blue"){
+	        document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="visible";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";	
+	    }
+	    else if(x=="Imported Marble" && y=="Onyx" && z=="White"){
+	        document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="visible";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Onyx" && z=="Blue"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="visible";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Imported Marble" && y=="Travertine" && z=="White"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="visible";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Flawless"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="visible";
+	    	document.getElementById("container10").style.visibility="hidden";
+	    }
+	    else if(x=="Wonder White"){
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="visible";
+	    }
+	    else{
+	    	document.getElementById("container1").style.visibility="hidden";
+	    	document.getElementById("container2").style.visibility="hidden";
+	    	document.getElementById("container3").style.visibility="hidden";
+	    	document.getElementById("container4").style.visibility="hidden";
+	    	document.getElementById("container5").style.visibility="hidden";
+	    	document.getElementById("container6").style.visibility="hidden";
+	    	document.getElementById("container7").style.visibility="hidden";
+	    	document.getElementById("container8").style.visibility="hidden";
+	    	document.getElementById("container9").style.visibility="hidden";
+	    	document.getElementById("container10").style.visibility="hidden";	
+	    }
+	   }	
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "lato", sans-serif;
+}
+ #top{
+     background: #050A4D;
+     height: 45px;
+     width:1265px;
+     margin-left: -10px;
+     margin-right: -10px;
+     margin-top: -25px;  
+
+  }
+  .help{
+    color:white;
+    font-family: "Verdana", Arial, Sans-serif;
+    font-weight: normal;
+  }
+  #location {
+     float:right;
+     margin-top: -40px;
+     margin-right: 275px;
+     padding: 1px 6px 1px 6px;
+     border: none;
+     background-color: transparent;
+  }
+
+
+  #call{
+     float:right;
+     margin-top: -40px;
+     margin-right: 60px;
+     padding: 1px 6px 1px 6px;
+     border: none;
+     background-color: transparent;
+  }
+#container {
+  position: absolute;
+  max-width: 1000px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+#container1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+#container2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+#container3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: visible;
+}
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+h2 small {
+  font-size: 0.5em;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.responsive-table .table-header {
+  background-color: #AD83ED;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+  flex-basis: 10%;
+}
+.responsive-table .col-2 {
+  flex-basis: 40%;
+}
+.responsive-table .col-3 {
+  flex-basis: 25%;
+}
+.responsive-table .col-4 {
+  flex-basis: 25%;
+}
+.responsive-table .col-5 {
+  flex-basis: 28%;
+}
+.responsive-table .col-6 {
+  flex-basis: 22%;
+}
+@media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+  .responsive-table li {
+    display: block;
+  }
+  .responsive-table .col {
+    flex-basis: 100%;
+  }
+  .responsive-table .col {
+    display: flex;
+    padding: 10px 0;
+  }
+  .responsive-table .col:before {
+    color: #6c7a89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.button {
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 4px solid #2b8bc6;
+  color: #fbfbfb;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+
+/* Just for presentation */  
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.button:active {
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,.2);
+  top: 1px;
+}
+
+.button:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 20px solid #187dbc;
+  border-bottom: 20px solid #187dbc;
+  border-left: 16px solid transparent;
+  border-right: 20px solid #187dbc;
+  position: absolute;
+  opacity: 0.6; 
+  right: 0;
+  top: 0;
+  border-radius: 0 5px 5px 0;  
+}
+input{
+      outline:none;
+    border-radius: 5px;
+    border-color: #B2AAFC;
+    box-shadow: 0px  0px  7px #A49AF9;  
+  }
+</style>
+</head>
+<body>
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#" onclick="order()">Check order</a>
+    <a href="#" onclick="marble()">Marbles</a>
+    <a href="#" onclick="granite()">Granites</a>
+    <a href="#" onclick="tiles()">Tiles</a>
+    <a href="/back">Back</a>
+  </div>
+</div>
+  <div id="top">
+     <h4 class="help" style="padding-top: 15px;margin-left: 850px">Help</h4>
+      <button id="location" style="outline: none" type="Submit" onclick="india()">
+      <img id="loc" src="static/images/location.png" style="float:left;margin-right: 4pt;margin-top: 1pt" width="17" height="17" >
+          <span style="color:white;font-size:12pt;font-family:Verdana", Arial, Sans-serif>India</span>
+      </button>
+      <button id="call" style="outline: none" type="Submit">
+      <img src="static/images/call.png" style="float:left;margin-right: 6pt;margin-top: 2pt" width="17" height="17">
+          <span style="color:white;font-size:12pt;font-family:Verdana", Arial, Sans-serif>(+91) 8553859227</span>
+      </button>
+        <hr style="height:3px;border:none;color:#333;background-color:#333;margin-top: -9pt" />
+    </div>
+ <span style="font-size:30px;cursor:pointer;color: white;position: absolute;top: 0;left: 0;right: 1;bottom: 0" onclick="openNav()">&#9776;</span>
+<div id="container">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">M_Id</div>
+      <div class="col col-2">Category</div>
+      <div class="col col-3">Type</div>
+      <div class="col col-4">Color</div>
+      <div class="col col-5">Name</div>
+      <div class="col col-6">Quantity</div>
+    </li>
+      {% for item in marble %}
+    <li class="table-row">
+      <div class="col col-1" data-label="M_Id">{{item[0]}}</div>
+      <div class="col col-2" data-label="Category">{{item[1]}}</div>
+      <div class="col col-3" data-label="Type">{{item[2]}}</div>
+      <div class="col col-4" data-label="Color">{{item[3]}}</div>
+      <div class="col col-5" data-label="Name">{{item[4]}}</div>
+      <div class="col col-6" data-label="Quantity">{{item[5]}}</div>
+    </li>
+     {% endfor %}
+  </ul>
+</div>
+<div id="container1">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">G_Id</div>
+      <div class="col col-2">Category</div>
+      <div class="col col-3">Type</div>
+      <div class="col col-4">Color</div>
+      <div class="col col-5">Name</div>
+      <div class="col col-6">Quantity</div>
+    </li>
+      {% for item in granite %}
+    <li class="table-row">
+      <div class="col col-1" data-label="M_Id">{{item[0]}}</div>
+      <div class="col col-2" data-label="Category">{{item[1]}}</div>
+      <div class="col col-3" data-label="Type">{{item[2]}}</div>
+      <div class="col col-4" data-label="Color">{{item[3]}}</div>
+      <div class="col col-5" data-label="Name">{{item[4]}}</div>
+      <div class="col col-6" data-label="Quantity">{{item[5]}}</div>
+    </li>
+     {% endfor %}
+  </ul>
+</div>
+<div id="container2">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">T_Id</div>
+      <div class="col col-2">Category</div>
+      <div class="col col-3">Type</div>
+      <div class="col col-4">Color</div>
+      <div class="col col-5">Name</div>
+      <div class="col col-6">Quantity</div>
+    </li>
+      {% for item in tiles %}
+    <li class="table-row">
+      <div class="col col-1" data-label="M_Id">{{item[0]}}</div>
+      <div class="col col-2" data-label="Category">{{item[1]}}</div>
+      <div class="col col-3" data-label="Type">{{item[2]}}</div>
+      <div class="col col-4" data-label="Color">{{item[3]}}</div>
+      <div class="col col-5" data-label="Name">{{item[4]}}</div>
+      <div class="col col-6" data-label="Quantity">{{item[5]}}</div>
+    </li>
+     {% endfor %}
+  </ul>
+</div>
+<div id="container3">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-2">P_Id</div>
+      <div class="col col-1">ID</div>
+      <div class="col col-5">Name</div>
+      <div class="col col-4">Size</div>
+      <div class="col col-6">Quantity</div>
+      <div class="col col-4">Amount</div>
+      <div class="col col-3">Payment</div>
+    </li>
+      {% for item in order %}
+    <li class="table-row">
+      <div class="col col-2" data-label="M_Id">{{item[0]}}</div>
+      <div class="col col-1" data-label="Category">{{item[1]}}</div>
+      <div class="col col-5" data-label="Type">{{item[2]}}</div>
+      <div class="col col-4" data-label="Color">{{item[3]}}</div>
+      <div class="col col-6" data-label="Name">{{item[4]}}</div>
+      <div class="col col-4" data-label="Quantity">{{item[5]}}</div>
+      <div class="col col-3" data-label="Quantity">{{item[6]}}</div>
+    </li>
+     {% endfor %}
+  </ul>
+    <form action="updatecart" method="post">
+      <input type="text" style="margin-left: 39%;border-radius: 5px;border-style:none;height: 33px;width: 200px;margin-bottom: 10px" name="p_id" placeholder="Customer Email id" />
+      <button class="button" onclick="cart()">Update</button>
+  </form>
+</div>
+</body>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+function marble(){
+  document.getElementById('container').style.visibility='visible';
+  document.getElementById('container1').style.visibility='hidden';
+  document.getElementById('container2').style.visibility='hidden';
+  document.getElementById('container3').style.visibility='hidden';
+  closeNav();
+}
+function granite(){
+  document.getElementById('container').style.visibility='hidden';
+  document.getElementById('container1').style.visibility='visible';
+  document.getElementById('container2').style.visibility='hidden';
+  document.getElementById('container3').style.visibility='hidden';
+  closeNav();
+}
+function tiles(){
+  document.getElementById('container').style.visibility='hidden';
+  document.getElementById('container1').style.visibility='hidden';
+  document.getElementById('container2').style.visibility='visible';
+  document.getElementById('container3').style.visibility='hidden';
+  closeNav(); 
+}
+function order(){
+  document.getElementById('container').style.visibility='hidden';
+  document.getElementById('container1').style.visibility='hidden';
+  document.getElementById('container2').style.visibility='hidden';
+  document.getElementById('container3').style.visibility='visible';
+  closeNav(); 
+}
+function cart(){
+   alert("Order Updated Successfully...");
+}
+</script>
+</html>
