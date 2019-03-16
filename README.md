@@ -13,4 +13,4 @@ Flask is a web framework. This means flask provides you with tools, libraries an
 Flask is part of the categories of the micro-framework. Micro-framework are normally framework with little to no dependencies to external libraries. This has pros and cons. Pros would be that the framework is light, there are little dependency to update and watch for security bugs, cons is that some time you will have to do more work by yourself or increase yourself the list of dependencies by adding plugins.
 ## ER-Diagram(Architecture)
 <br />
-![relationalschema](relationalschema.png)
+![Relationalschema](Relationalschema.png)
