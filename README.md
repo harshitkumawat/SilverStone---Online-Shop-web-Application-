@@ -15,4 +15,26 @@ Flask is part of the categories of the micro-framework. Micro-framework are norm
 ## ER-Diagram(Architecture)
 ![Relationalschema](Relationalschema.png)
 ## Web Pages
+### 1. Index Page..
+
 ![index.png alt](index.png)
+
+### 2. Login Page..
+
+![login.png alt](login.png)
+
+### 3. Registration Page..
+
+![register.png alt](register.png)
+
+### 4. Catalogs for Marbles, Granites, Tiles..
+
+![catalog.png alt](catalog.png)
+
+### 5. Invoice..
+
+![invoice.png alt](invoice.png)
+
+### 6. Payment..
+
+![payment.png alt](payment.png)
