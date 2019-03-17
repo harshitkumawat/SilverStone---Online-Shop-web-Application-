@@ -29,7 +29,7 @@ Flask is part of the categories of the micro-framework. Micro-framework are norm
 
 ### 4. Catalogs for Marbles, Granites, Tiles..
 
-![catalogs.png alt](catalog.png)
+![catalogs.png alt](catalogs.png)
 
 ### 5. Invoice..
 
