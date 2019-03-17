@@ -38,3 +38,11 @@ Flask is part of the categories of the micro-framework. Micro-framework are norm
 ### 6. Payment..
 
 ![payment.png alt](payment.png)
+
+### 7. Vendor page..
+
+![admin.png alt](admin.png)
+
+### 8. Stock Details..
+
+![stock.png alt](stock.png)
